@@ -1,4 +1,4 @@
-const Cart = ({ cartProducts, onRemove }) => {
+const Cart = ({ cartProducts, totalPrice, totalItems, onRemove }) => {
 
     if (cartProducts?.length === 0) {
         return (
@@ -6,8 +6,8 @@ const Cart = ({ cartProducts, onRemove }) => {
         )
     }
 
-    const totalPrice = cartProducts.reduce((total, product) => total + product.price * product.quantity, 0);
-    const totalItems = cartProducts.reduce((total, product) => total + product.quantity, 0);
+    // const totalPrice = cartProducts.reduce((total, product) => total + product.price * product.quantity, 0);
+    // const totalItems = cartProducts.reduce((total, product) => total + product.quantity, 0);
 
     return (
         <section>
